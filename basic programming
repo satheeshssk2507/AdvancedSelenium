@@ -1,0 +1,28 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Sample {
+
+	public static void main(String[] args) { //main---> ctrl+space
+		//launch browser
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ADMIN\\Downloads\\eclipse-committers-oxygen-3a-win32-x86_64\\SeleniumProject\\Drivers\\chromedriver-win64\\chromedriver.exe");
+		
+		//initialize the browsers
+		WebDriver driver = new ChromeDriver();
+		
+		//to load the url
+		driver.get("https://www.facebook.com/login/");
+		
+		//to get the title of the webpage
+		String title= driver.getTitle();
+		System.out.println(title);
+		
+		//to get the url of the webpage
+		String url= driver.getCurrentUrl(); //(ctrl+2 :L)
+		System.out.println(url);
+		
+		//to quit the browser
+		driver.quit();
+		
+	}
+}
